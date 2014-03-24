@@ -9,6 +9,17 @@ from fabric.api import *
 
 env.colorize_errors = True
 
+
+@task
+def docker_add_vagrant():
+    """
+    Add Vagrant to the Docker group to not need sudo all the time
+    """
+    sudo('gpasswd -a vagrant docker')
+    sudo('service docker restart')
+    local('vagrant reload')
+
+
 @task
 def ensure_machine():
     """
@@ -42,7 +53,6 @@ def fix_vagrant_guest_additions():
     sudo('apt-get -y -q purge virtualbox-guest-x11')
     local('vagrant halt')
     local('vagrant up --provision')
-    #local('vagrant halt')
 
 
 @task
@@ -78,3 +88,4 @@ def update_virtualbox():
     Fix Vagrant in Virtual Box after an update in Ubuntu
     """
     sudo('/etc/init.d/vboxadd setup')
+    local('vagrant reload')
