@@ -50,3 +50,14 @@ Now make it work out of root
 #!bash
 fab vagrant docker_add_vagrant
 ```
+And do a hello world to call it a day
+```
+#!bash
+fab vagrant hello_world
+```
+You should see something like
+```
+#!bash
+[127.0.0.1:2222] out: Hello World
+```
+Time to bed!

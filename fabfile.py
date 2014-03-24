@@ -11,6 +11,14 @@ env.colorize_errors = True
 
 
 @task
+def hello_world():
+    """
+    Run the Ubuntu hello world example
+    """
+    run('docker run ubuntu echo "Hello World"')
+
+
+@task
 def docker_add_vagrant():
     """
     Add Vagrant to the Docker group to not need sudo all the time
@@ -27,6 +35,7 @@ def ensure_machine():
     """
     sudo('apt-get update')
     sudo('apt-get install -y linux-image-extra-`uname -r`')
+
 
 @task
 def install_docker():
