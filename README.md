@@ -1,12 +1,9 @@
 # Running Docker.io in Vagrant
-
-I am trying this script in Bubuntu 13.04. If you don't have the vagrant box in your machine, the first step should be:
-
+I am trying this script in Bubuntu 13.04. If you don't have that vagrant box in your machine, the first step should be:
 ```
 #!bash
 vagrant box add raring64 http://goo.gl/ceHWg
 ```
-
 From then on, your machine will have the box available to fire a fresh instance on demand.
 
 Now the real thing. Get the machine ready
@@ -15,7 +12,6 @@ Now the real thing. Get the machine ready
 vagrant init raring64
 vagrant up
 ```
-
 Make sure that all is in the right place:
 ```
 #!bash
