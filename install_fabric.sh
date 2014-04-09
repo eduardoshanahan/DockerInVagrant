@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-printf "\nLoad pip and fabric\n"
 apt-get update
 apt-get install -y python-pip
 apt-get install -y python-dev

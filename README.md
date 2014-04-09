@@ -35,7 +35,7 @@ fab vagrant ensure_machine
 fab vagrant install_docker
 vagrant reload
 ```
-Nos you are deady to try it
+Now you are ready to try it
 ```
 #!bash
 sudo docker run -i -t ubuntu /bin/bash
